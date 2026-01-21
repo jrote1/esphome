@@ -88,7 +88,7 @@ class I2SAudioComponent : public Component {
   void set_lrclk_pin(int pin) { this->lrclk_pin_ = pin; }
 
   void lock() { this->lock_.lock(); }
-  bool try_lock() { return this->lock_.try_lock(); }
+  bool try_lock() { return true; }
   void unlock() { this->lock_.unlock(); }
 
   i2s_port_t get_port() const { return this->port_; }
